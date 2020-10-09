@@ -260,7 +260,9 @@ class Bookfeed extends CI_Controller {
 				$resourceURLp1="https://circ.sd00.worldcat.org";
 				$data=$this->oclcTransmit($resourceURLp1,$resourceURLp2);
 				$dataP=json_decode($data);
+				var_dump($dataP);
 				$dataP2=$dataP->entry;
+				
 				if(array_key_exists(0,$dataP2)){
 					for($c=0;$c<count($dataP2);$c++){
 						$copyObj=$dataP2[$c];											//Under what circumstances will there be multiple elements in this array? Multiple copies?
@@ -422,6 +424,7 @@ class Bookfeed extends CI_Controller {
 					$list=$this->Newbooks_model->loadBranchE();
 				}
 				foreach($list as $ocn){
+					
 					$orderItemNums=$this->Newbooks_model->getOINfromOCN($ocn,$statuteLimitations);		//Will return a match ONLY if item is marked received (otherwise no point looking for copy info) and ordered after cutoff date
 					foreach($orderItemNums as $orderItemNum=>$orderNum){
 						$resourceURLp2="/purchaseorders/".$orderNum."/items/".$orderItemNum;
