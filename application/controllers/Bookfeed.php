@@ -260,7 +260,6 @@ class Bookfeed extends CI_Controller {
 				$resourceURLp1="https://circ.sd00.worldcat.org";
 				$data=$this->oclcTransmit($resourceURLp1,$resourceURLp2);
 				$dataP=json_decode($data);
-				var_dump($dataP);
 				$dataP2=$dataP->entry;
 				
 				if(array_key_exists(0,$dataP2)){
