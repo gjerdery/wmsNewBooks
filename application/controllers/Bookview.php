@@ -157,6 +157,10 @@ class Bookview extends CI_Controller {
 			if($age=='order'){
 				$dateCutoff='ordered';
 			}
+			else{
+				$dateCutoff=strtotime($dateCutoff);
+				$dateCutoff=date("Y:m:d",$dateCutoff);
+			}
 			$list=$this->Newbooks_model->loadList2($type,$facet,$dateCutoff,$ageDeterminant);
 			/* De-duplication currently happens later during display, which can throw off the number of items per page
 			determined up here.
