@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/jaredcowing/wmsNewBooks)
+
 This service utilizes several APIs to display new books in the library (sorted by fund and date of arrival). It is built on the web framework CodeIgniter, a "rapid development" framework which is useful for quickly writing new features without poring through extensive documentation.
 
 The big picture of how this works (like which APIs it draws from) can be found [here](https://www.oclc.org/content/dam/community/WorldShare/global2019/Presentations/cowing-lightning-talk.pdf), and a working version can be found [here](https://library.woodbury.edu/newbooks).
