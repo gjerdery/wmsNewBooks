@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var baseURL="http://lis.luther.edu/wmsNewBooks";	//Put your base URL here, without end slash
+	var baseURL="https://lis.luther.edu/wmsNewBooks";	//Put your base URL here, without end slash
 	window.onload=function(){
 	
 	$('.cover').each(function(){
