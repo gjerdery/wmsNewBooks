@@ -230,13 +230,13 @@ class Bookview extends CI_Controller {
 			// $this->output->append_output ("<a href='".$baseURL."/index.php/Bookview/repeat/".$age."/".$fundPad.urlencode($facet)."/".$size."'><div id='newBooksBack' role='button' tabindex='0'><img src='" . $baseURL ."/images/ic_arrow_back_black_24dp_2x.png' alt='New books search: Go back'></img></div></a>");		//Make this link read from newbooksconfig
 			$this->output->append_output("<br /><div class='resultsHead'><strong>");
 			if($dateCutoff=='none'){
-				if($type=='subject'){ $this->output->append_output("New ".$subjDict[$facet]." books and videos "); }
+				if($type=='subject'){ $this->output->append_output("New ".$subjDict[$facet]." titles "); }
 				else if($type=='format'){ $this->output->append_output("New ".$facet." "); }
 			}
 			else if($dateCutoff!='ordered'){
-				if($facet=='All'){ $this->output->append_output("All newly bought books and videos from the last "); }
-				else if($type=='subject'){ $this->output->append_output("New ".$subjDict[$facet]." books and videos bought from the last "); }
-				else if($type=='format'){ $this->output->append_output("New ".$facet." bought from the last "); }
+				if($facet=='All'){ $this->output->append_output("All newly bought titles from the last "); }
+				else if($type=='subject'){ $this->output->append_output("New ".$subjDict[$facet]." titles added in the past "); }
+				else if($type=='format'){ $this->output->append_output("New ".$facet." added in the past "); }
 				switch($age){
 					case '1M':
 						$this->output->append_output("1 month");
@@ -256,8 +256,8 @@ class Bookview extends CI_Controller {
 				}
 			}
 			else if($dateCutoff=='ordered'){
-				if($facet=='All'){ $this->output->append_output("All books and videos expected soon"); }
-				else if($type=='subject'){ $this->output->append_output("New ".$subjDict[$facet]." books and videos expected soon"); }
+				if($facet=='All'){ $this->output->append_output("All titles expected soon"); }
+				else if($type=='subject'){ $this->output->append_output("New ".$subjDict[$facet]." titles expected soon"); }
 				else if($type=='format'){ $this->output->append_output("New ".$facet." expected soon"); }
 			}
 			$this->output->append_output(":</strong></div><br /><br /><br />");
